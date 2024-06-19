@@ -146,21 +146,23 @@ const Main = () => {
                                     {/* Tags */}
                                     <div className={mainStyles.viola}>
                                         <h3 className="text-center">Seleziona i Tag</h3>
-                                        {Tags.map((tag, index) => (
-                                            <div className="form-check" key={index}>
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    id={`tag-${index}`}
-                                                    value={tag}
-                                                    checked={formData.Tags.includes(tag)}
-                                                    onChange={handleChange}
-                                                />
-                                                <label className="form-check-label" htmlFor={`tag-${index}`}>
-                                                    {tag}
-                                                </label>
-                                            </div>
-                                        ))}
+                                        <div className="d-flex flex-wrap">
+                                            {Tags.map((tag, index) => (
+                                                <div className="form-check mx-1 my-3" key={index}>
+                                                    <input
+                                                        className="form-check-input"
+                                                        type="checkbox"
+                                                        id={`tag-${index}`}
+                                                        value={tag}
+                                                        checked={formData.Tags.includes(tag)}
+                                                        onChange={handleChange}
+                                                    />
+                                                    <label className="form-check-label" htmlFor={`tag-${index}`}>
+                                                        {tag}
+                                                    </label>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-12 text-center">
@@ -172,12 +174,14 @@ const Main = () => {
 
                     <h3 className={mainStyles.viola}>Posts salvati</h3>
                     {posts.map((post, index) => (
-                        <div className="card-body">
+                        <div className="col-4 my-3 text-center">
                             <h3 className="Text-center">{post.title}</h3>
-                            <img src={post.img} alt={post.title} className="image" />
+                            <figure>
+                                <img src={post.img} alt={post.title} className={mainStyles.image} />
+                            </figure>
                             <p className="text-center">{post.text}</p>
-                            <h5><strong>Categoria:</strong> {post.Category}</h5>
-                            <h6><strong>Tags:</strong> {post.Tags.join("-")}</h6>
+                            <h5><strong className={mainStyles.viola}>Categoria:</strong> {post.Category}</h5>
+                            <h6><strong className={mainStyles.viola}>Tags:</strong> {post.Tags.join(" - ")}</h6>
                         </div>
                     ))}
 

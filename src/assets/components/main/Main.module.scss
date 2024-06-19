@@ -19,33 +19,10 @@
     }
 }
 
-.trash{
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    margin-left: 5px;
-    &:hover{
-        background-color: white;
-        color: red;
-        border: 1px solid;
-    }
-}
-
-.edit{
-    background-color: rgb(255, 187, 0);
-    color: white;
-    border: none;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    &:hover{
-        background-color: white;
-        color: rgb(255, 187, 0);
-        border: 1px solid;
-    }
+.image{
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 200px;
+    object-fit: cover;
 }
