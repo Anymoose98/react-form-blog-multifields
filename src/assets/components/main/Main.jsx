@@ -121,7 +121,7 @@ const Main = () => {
                                     ></textarea>
                                 </div>
 
-                                <div className="col-6 my-2 p-1 text-center">
+                                <div className="col-12 col-md-6 my-2 p-1 text-center">
                                     {/* Categorie */}
                                     <label htmlFor="Category" className={mainStyles.viola}>
                                         <h3>Seleziona una categoria</h3>
@@ -142,7 +142,7 @@ const Main = () => {
                                     </select>
                                 </div>
 
-                                <div className="col-6 p-1 ">
+                                <div className="col-12 col-md-6 p-1 ">
                                     {/* Tags */}
                                     <div className={mainStyles.viola}>
                                         <h3 className="text-center">Seleziona i Tag</h3>
@@ -174,7 +174,7 @@ const Main = () => {
 
                     <h3 className={mainStyles.viola}>Posts salvati</h3>
                     {posts.map((post, index) => (
-                        <div className="col-4 my-3 text-center">
+                        <div className="col-12 col-md-4 col-lg-3 my-3 text-center">
                             <h3 className="Text-center">{post.title}</h3>
                             <figure>
                                 <img src={post.img} alt={post.title} className={mainStyles.image} />
